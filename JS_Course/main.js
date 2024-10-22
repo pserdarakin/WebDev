@@ -39,7 +39,6 @@ console.log(s.substring(0, 5).toUpperCase());
 console.log(s.split(''));
 console.log(s.split(', ')); */
 
-
 /* Arrays - variables that hold multiple values
 
 // const numbers = new Array(1,2,3,4,5);
@@ -47,7 +46,6 @@ console.log(s.split(', ')); */
 // const fruits = ['apples', 'oranges', 'pears'];
 
 // console.log(fruits[1]); */
-
 
 /* const person = {
     firstName: 'John',
@@ -93,7 +91,6 @@ console.log(person); */
 
 const todoJSON = JSON.stringify(todos);
 console.log(todoJSON); */
-
 
 /* For (until it get true its gonna run)
 
@@ -167,5 +164,64 @@ switch(color) {
         break;
 } */
 
+/* function addNums(num1 = 1, num2 = 1) {
+    return num1 + num2;
+}
+console.log(addNums(5,5));
 
-        
+
+const addNums = (num1 = 1, num2 = 1) => num1 + num2; // you dont even need to put return for this structure.
+// you can put your return and paranthesis back as well
+console.log(addNums(5, 5));
+*/
+
+// Object Oriented Programing 
+
+/* Constructor function
+function Person(firstName, lastName, dob) {
+    this.firstName = firstName;
+    this.lastName = lastName;
+    this.dob = new Date(dob);
+    this.getBirthYear = function(){
+        return this.dob.getFullYear();
+    }
+    this.getFullName = function() {
+        return `${this.firstName} ${this.lastName}`;
+    }
+}
+
+Person.prototype.getBirthYear = function() {
+    return this.dob.getFullYear();
+}
+
+Person.prototype.getFullName = function() {
+    return `${this.firstName} ${this.lastName}`;
+} */
+
+/* Class // Its basically samething with construstor function but more organised way, and you dont need to deal with prototypes
+
+class Person {
+    constructor(firstName, lastName, dob) {    // Just like the constructor function above, Same stuff inside of the paranthesis "properties"
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.dob = new Date(dob);
+    }                    
+    getBirthYear() {// Any method we want to put in 
+        return this.dob.getFullYear(); // Functionality
+    }
+    
+    getFullName() {
+        return `${this.firstName} ${this.lastName}`;
+    }
+}
+
+// Instantiate object
+const person1 = new Person('John', 'Doe', '7/1/1999');
+const person2 = new Person('Mary', 'Smith', '6/14/1996');
+
+
+console.log(person1);
+console.log(person2.getFullName()); */
+
+
+// Document Object Model = Its a tree structure of your whole documents 
