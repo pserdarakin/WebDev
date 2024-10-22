@@ -223,5 +223,69 @@ const person2 = new Person('Mary', 'Smith', '6/14/1996');
 console.log(person1);
 console.log(person2.getFullName()); */
 
-
 // Document Object Model = Its a tree structure of your whole documents 
+
+/* Element Selectors Selection - Picking up some elements from html, css etc. 
+
+console.log(window); // window object is the parent object of the browser, so its like very top; window.alert(1); == alert(1);
+
+// Single Element Selectors
+console.log(document.getElementById('my-form'));
+console.log(document.querySelector('h1')); // as it is a single element selector, even tho there are more than elements its going to pick the first one
+
+// Multiple Element Selectors
+console.log(document.querySelectorAll('.item')); // NodeList == similar like arrays 
+console.log(document.getElementsByClassName('item')); // HTMLCollection, you need to manually converted to in an array, stick with the query selector 
+console.log(document.getElementsByTagName('li'));
+
+const items = document.querySelectorAll('.item');
+
+items.forEach((item) => console.log(item)); */
+
+/* Manupilating DOM
+
+const ul = document.querySelector('.items');
+
+// ul.remove();
+// ul.lastElementChild.remove();
+ul.firstElementChild.textContent = 'Hello';
+ul.children[1].innerText = 'Brad';
+ul.lastElementChild.innerHTML = '<h1>Hello</h1>';
+
+const btn = document.querySelector('.btn');
+btn.style.background = 'red'; */
+
+/* const btn = document.querySelector('.btn');
+
+btn.addEventListener('mouseout', (e) => {
+    e.preventDefault();
+    document.querySelector('#my-form').style.background = '#ccc';
+    document.querySelector('body').classList.add('bg-dark');
+    document.querySelector('.items').lastElementChild.innerHTML = '<h1>Hello</h1>';
+}); */
+
+const myForm = document.querySelector('#my-form');
+const nameInput = document.querySelector('#name');
+const emailInput = document.querySelector('#email');
+const msg = document.querySelector('.msg');
+const userList = document.querySelector('#users');
+
+myForm.addEventListener('submit', onSubmit);
+
+function onSubmit(e) {
+    e.preventDefault();
+
+    if(nameInput.value === '' || emailInput.value === '') {
+        msg.classList.add('error');
+        msg.innerHTML = 'Please enter all fields'; // simple way; alert('Please enter fields');
+        setTimeout(() => msg.remove(), 3000);
+    } else {
+        const li = document.createElement('li');
+        li.appendChild(document.createTextNode(`${nameInput.value}: ${emailInput.value}`));
+        userList.appendChild(li);
+
+        // Clear the fields
+        nameInput.value = '';
+        emailInput.value = '';
+    }
+}
