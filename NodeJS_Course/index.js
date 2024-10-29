@@ -13,7 +13,23 @@ Example; Event Loop; Giant Door, Task or Operations: Person, => Person walks int
 
 // Use For
 - APIs, Server-rendered apps, Real-time applications, microservices, command line tools, bots, web scraping, web servers
+- Start with npm -init => package.json file createation 
 */
+
+// Default export module, first we created utils.js and some function in it then using module.exports for function and in the index use the require object to initiate 
+
+import getPosts, { getPostsLength } from "./postController.js";
+
+console.log(getPosts());
+
+console.log(`Posts Length: ${getPostsLength()}`);
+
+// const {generateRandomNumber, celciusToFahrenheit} = require('./utils');
+
+// console.log(`Random Number: ${generateRandomNumber()}`);
+
+// console.log(`Celcius to fahrenhiet: ${celciusToFahrenheit(0)} `);
+
 
 
 
