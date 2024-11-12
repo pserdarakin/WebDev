@@ -33,19 +33,19 @@ console.log(hello);
 
 /* const s = 'Hello World';
 
-console.log(s.length); // if has paranthesis its a method it means, executes the methdos and allows passing arguments or capturing the return value, without parantheses method name becomes and expression that evaluates to the method object.
+console.log(s.length); // if has paranthesis its a method it means, executes the methods and allows passing arguments or capturing the return value, without parantheses method name becomes an expression that evaluates to the method object.
 console.log(s.toUpperCase());
 console.log(s.substring(0, 5).toUpperCase());
 console.log(s.split(''));
 console.log(s.split(', ')); */
 
-/* Arrays - variables that hold multiple values
+/* Arrays - variables that hold multiple values 
 
-// const numbers = new Array(1,2,3,4,5);
+const numbers = new Array(1,2,3,4,5);
 
-// const fruits = ['apples', 'oranges', 'pears'];
+const fruits = ['apples', 'oranges', 'pears'];
 
-// console.log(fruits[1]); */
+console.log(fruits[1]); */
 
 /* const person = {
     firstName: 'John',
@@ -264,7 +264,7 @@ btn.addEventListener('mouseout', (e) => {
     document.querySelector('.items').lastElementChild.innerHTML = '<h1>Hello</h1>';
 }); */
 
-const myForm = document.querySelector('#my-form');
+/* const myForm = document.querySelector('#my-form');
 const nameInput = document.querySelector('#name');
 const emailInput = document.querySelector('#email');
 const msg = document.querySelector('.msg');
@@ -289,3 +289,4 @@ function onSubmit(e) {
         emailInput.value = '';
     }
 }
+*/
