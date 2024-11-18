@@ -290,3 +290,9 @@ function onSubmit(e) {
     }
 }
 */
+
+
+/* jQuery 
+document.querySelector("h1") == jQuery("h1") == $("h1") also $ sign will select All
+jQuery/download => CDN - google CDN put the link ABOVE the connection to the index.js link 
+*/

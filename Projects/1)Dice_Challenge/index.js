@@ -22,3 +22,5 @@ if (randomNumber1 == randomNumber2) {
 } else {
     document.querySelector('h1').innerHTML = 'Refresh Me';
 }
+
+console.log(randomNumber1);
