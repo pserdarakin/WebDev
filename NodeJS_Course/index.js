@@ -16,13 +16,62 @@ Example; Event Loop; Giant Door, Task or Operations: Person, => Person walks int
 - Start with npm -init => package.json file createation 
 */
 
+/* Node Read Eval Print Loop (REPL)
+ is a computer environment where user inputs are read and evaluated, and then the results are returned to the user.
+to initiate type `node` 
+
+console.log("Hello from Node!"); */ 
+
+/* Native Modules
+ FileSystem module
+
+const fs = require("fs");
+
+fs.writeFile("message.txt", "Hello from NodeJS!", (err) => {
+    if (err) throw err;
+    console.log("The file has been saved!");
+});
+
+fs.readFile("./message.txt", 'utf8', (err, data) => {
+    if (err) throw err;
+    console.log(data);
+});
+
+*/
+
+/* Node Package Manager (NPM)
+`npm init` => package.json => a way of representing our data, the JS object notation
+`npm install <package>` (npm i <package>) npmjs.com
+
+
+var generateName = require("sillyname");
+var sillyname = generateName();
+
+console.log(`I am identify myself as ${sillyname}.`);
+
+// CJS : CommonJS method using "require" ESM : "import" => ECMAScript Modules;
+// helping us be consistent in front end and back end. to use need to configure package.json, type has to be updated
+
+import generateName from "sillyname";
+var sillyName = generateName();
+
+console.log(`My name is ${sillyName}.`);
+
+----------------------------
+
+import {randomSuperhero} from 'superheroes';
+
+const name = randomSuperhero();
+
+console.log(`${name}`); */
+
 // Default export module, first we created utils.js and some function in it then using module.exports for function and in the index use the require object to initiate 
 
-import getPosts, { getPostsLength } from "./postController.js";
+// import getPosts, { getPostsLength } from "./postController.js";
 
-console.log(getPosts());
+// console.log(getPosts());
 
-console.log(`Posts Length: ${getPostsLength()}`);
+// console.log(`Posts Length: ${getPostsLength()}`);
 
 // const {generateRandomNumber, celciusToFahrenheit} = require('./utils');
 
