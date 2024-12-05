@@ -49,8 +49,32 @@ var sillyname = generateName();
 
 console.log(`I am identify myself as ${sillyname}.`);
 
-// CJS : CommonJS method using "require" ESM : "import" => ECMAScript Modules;
-// helping us be consistent in front end and back end. to use need to configure package.json, type has to be updated
+// CJS (CommonJS) : 
+- This is the older module system used in Node.js.
+- You use `require` to import modules
+
+// ESM (ECMAScript Modules) : 
+- This is the modern module system introduced in ES6 (2015).
+- It uses `import` and `export` syntax, which is consistent with how JavaScript modules are handled in browsers
+
+// ESM is consistent between frontend (e.g., browsers) and backend (Node.js), making your code cleaner and easier to maintain.
+
+// To use ESM (import/export) in Node.js, you need to configure the "type" field in your package.json file. Here’s how:
+
+1. Add "type": "module" to package.json
+
+- Open your package.json file and add the "type": "module" field
+
+2. Impact of "type": "module"
+
+- When "type": "module" is set:
+- All .js files will be treated as ESM by default.
+- You must use import/export in your code.
+- require won’t work anymore unless the file has a .cjs extension.
+
+3. Switching Back to CommonJS
+
+- If you prefer to use CommonJS (require/module.exports), set "type": "commonjs" or remove the "type" field entirely. This is the default behavior for Node.js.
 
 import generateName from "sillyname";
 var sillyName = generateName();
