@@ -4,24 +4,27 @@
 3. Create a txt file to save the user input using the native fs node module.
 */
 
-import { default as inquirer } from "inquirer";
-import { image } from "qr-image";
+import inquirer from "inquirer";
+import qr from "qr-image";
+import fs from "fs";
 
-const questions = [
-    {
-        type: 'input',
-        name: 'website',
-        message: 'Type the address that you want to convert to QR',
-    },
-];
 
-inquirer.prompt(questions).then((answers) => {
-    console.log(JSON.stringify(answers, null, ''));
-});
+inquirer
+  .prompt([{
+    message: "Type the address that you want to convert to QR:",
+    name: "URL"
+}])
+  .then((answers) => {
+    const url = answers.URL;
+    
+    var qr_img = qr.image(url);
+    qr_img.pipe(fs.createWriteStream('berkant_coins.png'));
+  })
+  .catch((error) => {
+    if (error.isTtyError) {
+      "Prompt couldn't be rendered in the current environment"
+    } else {
+      "Something else went wrong"
+    }
+  });
 
-var qr = require('qr-image');
-
-var qr_img = qr.image(answers.website, {type: 'img'});
-qr_img.pipe(require('fs').createWriteStream('lets_go.img'));
-
-var img_string = qr.imageSync(answers.website, {type: 'img'});
