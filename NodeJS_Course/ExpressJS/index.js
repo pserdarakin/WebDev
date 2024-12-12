@@ -66,10 +66,9 @@ app.listen(port, () => {
 
 Middlewares; Sits in between raw request come in to the server and before get processed by routes(GET,POST etc.) that can work on this request
 Duties;
-1) Handling multiple requests
-2) Logging the request; how long, what type, what is the status etc.
+1) Handling multiple requests (pre-processing); example is `body-parser`; when you create html forms helps to parse the body (one of the middleware)
+2) Logging the request; how long, what type, what is the status etc.; example is `morgan`; http request logger middleware
 3) Authentication; for example, someone want to change facebook name to handbook, middleware gonna check if that client is allowed to that.
 4) Errors
 
-Body-handlers; when you create html forms helps to parse the body (one of the middleware)
 */
