@@ -20,6 +20,12 @@ app.post("/submit", (req, res) => {
     res.redirect("/");
 });
 
+app.get("/delete", (req, res) => {
+  const targetPost = req.body.postContent;
+  posts.delete(targetPost);
+  res.redirect("/");
+});
+
 app.listen(port, () => {
   console.log(`Server running on port ${port}.`);
 });
