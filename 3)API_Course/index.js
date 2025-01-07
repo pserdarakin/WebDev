@@ -14,7 +14,8 @@ It's APIs that follow a particular set of rules.
 Most important rule of that is use the HTTP Protocol to interact with the API. (GET,POST,PUT,PATCH,DELETE)
 */
 
-/* What we are doing in our local projects:
+/* Structring API 
+What we are doing in our local projects:
 1. The process of a frontend application making a GET request to a private API hosted on a server. 
 2. The server processes the request and sends a response back to the frontend application.
 3. This showcases the interaction between the frontend, the API, and the backend server.
@@ -31,5 +32,21 @@ Most important rule of that is use the HTTP Protocol to interact with the API. (
 4.	Response: The data is sent back from the other server to your server through the Public API.
 
 This demonstrates how servers communicate with external APIs to fetch or exchange data.
+
+API Endpoints
+BaseURL/Endpoint -> /random /filter etc.
+
+Query Parameters
+BaseURL/endpoint?query=value&query2=value -> key value pair / second query and so forth has to be connected with "&"
+
+Path Parameters
+BaseURL/endpoint/{path-parameter} -> identifiying resource
+*/
+
+/* JSON (JavaScript Object Notation) : The way to send information, readable and efficient
+packed version of javascript object => JSON => {"key":value,"key2":value2} -> flatpack notation -> for more readable version go to json viewer
+
+JS Object to JSON => const jsonData = JSON.stringify(data); (data is the JS object)
+JSON to JS Object => const data = JSON.parse(jsonData);
 
 */
