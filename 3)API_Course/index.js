@@ -1,0 +1,35 @@
+/* Application Programming Interface (API):
+Definition: A set of rules and protocols that define how different software can interact with each other.
+
+Examples: program A and program B which they have different functionality and they need to communicate, you need api in between to interact each other.
+- GET request from your server to the other websiteand get response from that data, via API
+- POST request from your server to the mailchimp(email database to store collected email) and in return get response with 200 code, 
+in the meantime mailchimp API defines a structure for the data you want to send, and also it tells you what kind of responses you can expect in which kind of situations.
+
+Different types of APIs; GraphQL,SOAP,REST etc. essentially they have different architectural styles.
+*/
+
+/* {REST:API}
+It's APIs that follow a particular set of rules. 
+Most important rule of that is use the HTTP Protocol to interact with the API. (GET,POST,PUT,PATCH,DELETE)
+*/
+
+/* What we are doing in our local projects:
+1. The process of a frontend application making a GET request to a private API hosted on a server. 
+2. The server processes the request and sends a response back to the frontend application.
+3. This showcases the interaction between the frontend, the API, and the backend server.
+
+--- API Usage in Projects ---
+// Example:
+// Fetching data from a REST API in a local project:
+// - Frontend: Makes a GET request to retrieve information from the server.
+// - Backend: Processes the request, queries the database (if needed), and sends a response.
+
+1.	Your Server: Sends a GET request to a Public API hosted on someone else’s server.
+2.	Public API: The API acts as an intermediary, defining the rules for how your server can interact with someone else’s server.
+3.	Someone Else’s Server: Processes the request received through the Public API and sends a response back to your server.
+4.	Response: The data is sent back from the other server to your server through the Public API.
+
+This demonstrates how servers communicate with external APIs to fetch or exchange data.
+
+*/

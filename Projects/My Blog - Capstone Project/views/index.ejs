@@ -1,0 +1,29 @@
+<%- include("partials/header.ejs") %>
+
+<h1>Welcome to the Serdie & Vickie's Blog</h1>
+
+<%# Post Creation %>
+<form action="/submit" method="POST">
+    <input type="text" name="postContent" required>
+    <input type="submit" value="Post">
+</form>
+
+<% if (posts.length > 0) { %>
+        <% posts.forEach(i => { %>
+            <li>
+                <%= i %>
+                <form action="/edit" method="post" style="display:inline;">
+                    <input type="button" name="editContent" value=" <%= i %>">
+                </form>
+                <form action="/delete" method="delete" style="display:inline;">
+                    <input type="hidden" name="postContent" value=" <%= i %>" >
+                    <input type="submit" value="delete" > 
+                </form>
+            </li>
+<% }); %>
+<% } else { %>
+    <h2>No posts yet! Be the first to add one.</h2>
+<% } %>    
+
+
+<%- include("partials/footer.ejs") %>
