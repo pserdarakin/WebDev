@@ -50,3 +50,42 @@ JS Object to JSON => const jsonData = JSON.stringify(data); (data is the JS obje
 JSON to JS Object => const data = JSON.parse(jsonData);
 
 */
+
+/* Server-side API Requests (Making requests from your server using Node and Axios)
+Your Server -> {GET request} -> Provider -> {Response} -> Your Server
+
+import https from "https";
+
+app.get...
+    const options = {
+        hostname: "baseURL",
+        path: "/endpoint",
+        method: "GET",
+    };
+
+    const request = https.request(options, (response) => {
+        let data = "";
+        response.on("data", (chunk) => {
+            data += chunk;
+        )};
+        });
+
+        .
+        .
+        .
+        .
+
+        This was native module, and its quite long so rather than that we can use something call axios method
+
+import axios from "axios";
+app.get ("/", async (req, res) => {
+    try {
+        const response = await axios.get("baseURL");  // Can be use either .then or async await, in order to handle the response. Because what it has been tried here is to render a home page and to provide it with some activity data, await to wait for that to finish and then go ahead and res.render the index page.
+        res.render("index.ejs", { activity: respose.data });
+    } catch (error) {
+        console.error("Failed to make request:", error.message);
+        res.status(500).send("Failed to fetch activity. Please try again.");
+    }
+    });
+
+*/
