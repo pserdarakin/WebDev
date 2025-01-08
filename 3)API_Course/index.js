@@ -99,3 +99,50 @@ Sometimes API Key has to be in header or query parameters, that based on the pro
 3. Token Based Authentication; Username/password -> Token -> API (so there is not direct connection between API and sensitive infos.) OAUTH kind of industry standart
 
  */
+
+/* RestAPI
+Both are coming from JS "Promises";
+.get().then() => Then will get trigger ones .get() resolves and also you can get chain those promises base methods like; .get().then().then() to happen in order
+async await axios.get() => we have particular function and it markes as async rest is same except you gonna mark inside of the function with "await"."await" means wait untill the rest of the line of is done before moving forward to next line of code.
+
+#GET & POST
+
+try {
+    await axios.get("URL", config); or await axios.post("URL", body, config); its the body of your form data(such as, username,password etc.)
+  }
+
+#PUT (put request provides all of the data that wanted to update in the back-end side.)
+
+
+app.put("/", async (req, res) => {
+    try {
+        await axios.put("URL", body, config);
+        res.sendStatus(200);
+    } catch (error) {
+        res.status(404).send(error.response.data);
+    }
+});
+
+#PATCH
+
+app.patch("/", async (req, res) => {
+    try {
+        await axios.patch("URL", body, config);
+        res.sendStatus(200);
+    } catch (error) {
+        res.status(404).send(error.response.data);
+    }
+});
+
+#DELETE
+
+app.delete("/", async (req, res) => {
+    try {
+        await axios.delete("URL", config);
+        res.sendStatus(200);
+    } catch (error) {
+        res.status(404).send(error.response.data);
+    }
+});
+
+*/
