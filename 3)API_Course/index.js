@@ -89,3 +89,13 @@ app.get ("/", async (req, res) => {
     });
 
 */
+
+/* API Authentication
+
+0. No Authentication; example bored-API, public API -> it can be add rate-limit (#request/min) (some safety measure)
+1. Basic Authentication; username&password, authenticate yourself to the API provider. It is usually done with Base64 Encoding
+2. API Key Authorisation; Authorisation is something that allows you to use API, Authentication is something that allows you to be identified as an user to the API provider.
+Sometimes API Key has to be in header or query parameters, that based on the provider docs.
+3. Token Based Authentication; Username/password -> Token -> API (so there is not direct connection between API and sensitive infos.) OAUTH kind of industry standart
+
+ */
