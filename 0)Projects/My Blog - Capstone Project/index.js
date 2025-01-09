@@ -20,7 +20,7 @@ app.post("/submit", (req, res) => {
     res.redirect("/");
 });
 
-app.get("/delete", (req, res) => {
+app.post("/delete", (req, res) => {
   const targetPost = req.body.postContent;
   posts.delete(targetPost);
   res.redirect("/");

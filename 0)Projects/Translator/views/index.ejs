@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Translator</title>
+    <link rel="stylesheet" href="styles/main.css">
+</head>
+<body>
+    <div class="translator-container">
+        <!-- Header -->
+        <header class="header">
+            <h1>Ferheng 🌎 Translator</h1>
+        </header>
+
+        <!-- Translation Form -->
+        <form action="/translate" method="POST">
+            <!-- Language Selection -->
+            <div class="language-selection">
+                <div class="language-option">
+                    <label for="sourceLang">From:</label>
+                    <select id="sourceLang" name="sourceLang">
+                        <option value="ku" selected>Kurdi</option>
+                        <option value="en" selected>English</option>
+                        <option value="tr" >Turkish</option>
+                        <!-- Add more languages -->
+                    </select>
+                </div>
+                <div class="language-swap">
+                    <button type="button" onclick="swapLanguages()">&#8596;</button>
+                </div>
+                <div class="language-option">
+                    <label for="targetLang">To:</label>
+                    <select id="targetLang" name="targetLang">
+                        <option value="en" selected>English</option>
+                        <option value="ku" selected>Kurdi</option>
+                        <option value="tr">Turkish</option>
+                        <!-- Add more languages -->
+                    </select>
+                </div>
+            </div>
+
+            <!-- Translation Box -->
+            <% if (translatedText) { %>
+                <div class="translation-box">
+                    <div class="text-area">
+                        <textarea id="sourceText" name="sourceText" placeholder="Enter text here..."></textarea>
+                    </div>
+                    <div class="text-area">
+                        <textarea id="translatedText" name="translatedText" placeholder="Translation will appear here..." readonly><%= translatedText %></textarea>
+                    </div>
+                </div>
+            
+            <% } %>
+            
+
+            <!-- Translate Button -->
+            <div class="button-container">
+                <button type="submit" id="translateButton" class="modern-button">Translate</button>
+            </div>
+        </form>
+
+        
+    </div>
+</body>
+</html>
