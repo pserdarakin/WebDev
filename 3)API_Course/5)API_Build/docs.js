@@ -63,7 +63,7 @@ app.get("/jokes/:id", (req,res) => {
 });
 
 app.get() in order to address when we get a GET request to our server,
-and that GET request mathes this endpoint/jokes/particular id
+and that GET request matches this endpoint/jokes/particular id
 
 When we get hold of that id with above process and via req.params.id this is how we access any of the URL or path parameters in Express.
 Reminder; req.params Params is in the endpoint URL(/jokes/:id), and req.query Query comes after the question mark(?id=2)
@@ -78,4 +78,12 @@ app.get("/filter", (req, res) => {
   res.json(findJoke);
 });
 type by query parameters so you needed to check the api docs cause there is a note a query params for "type".
+*/
+
+/* 6)API_Blog Project
+There 2 servers running simultaneously;
+- one from server.js which is going to act as the back-end that makes the API requests. port 3000 (backend #1 Makes API requests) / example; somebody using your API and building a back-end.
+- the other one index.js which is going to be our back-end for our actual API. port 4000 (backend #2 Your API responds). This is the one that actually responds to the API requests from external servers.
+
+
 */
