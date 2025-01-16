@@ -35,6 +35,10 @@ ES6 Template Literals; injection strings into a piece of JavaScript.
 */
 
 /* JSX Attributes and Styling
-if we will try something like; ReactDOM.render(<div><h1 class="heading">My Favourite Foods</h1>... this, it'll work but still Invalid DOM property Error, so its still render down as JavaScript, so we need to use className (its coming from JS)
+if we will try something like; ReactDOM.render(<div><h1 class="heading">My Favourite Foods</h1>... this, 
+it'll work but still Invalid DOM property Error, so its still render down as JavaScript, so we need to use className (its coming from JS)
+
+HTML Global Attributes: https://www.w3schools.com/tags/ref_standardattributes.asp inside of here it is contenteditable(no camel case) but for convention,
+we need to use camel case inside of the code line example: <div><h1 class="heading" contentEditable>My Favourite Foods</h1>... 
 
 */
