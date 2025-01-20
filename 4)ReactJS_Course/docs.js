@@ -40,5 +40,27 @@ it'll work but still Invalid DOM property Error, so its still render down as Jav
 
 HTML Global Attributes: https://www.w3schools.com/tags/ref_standardattributes.asp inside of here it is contenteditable(no camel case) but for convention,
 we need to use camel case inside of the code line example: <div><h1 class="heading" contentEditable>My Favourite Foods</h1>... 
+*/
+
+/* Inline Styling in JSX
+{
+    key:value
+}
+as like JS objects. 
+{
+    color:"red",
+}
+
+for some reasons if you want to change;
+
+const customStyle = {
+    color:"red",
+    fontSize: "20px", // font-size was the original from css library.
+    border: "1px solid black" //has to be string
+}
+
+customStyle.color = "blue"; 
+
+... <h1 style= {customStyle}...
 
 */
