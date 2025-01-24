@@ -1,4 +1,4 @@
-/* Definition: A JavaScript library for building user interfaces. (A front-end framework)
+/* 1) Definition: A JavaScript library for building user interfaces. (A front-end framework)
 
 codesandbox: browser based dev env which allows you to instantly deploy whatever it is you build.
 
@@ -13,7 +13,7 @@ ReactDOM.render(<h1>Hello World!</h1><p>ADD PARAGRAPH</p>, document.getElementBy
 Rather what we can do is, putting those 2 elements inside of div element.
 */
 
-/* Javascript Expressions in JSX & ES6 Template Literals
+/* 2) Javascript Expressions in JSX & ES6 Template Literals
 - via JSX, we are able to implement HTML inside of the JS (example; ReactDOM.render(<h1>Hello World!</h1>, document.getElementById("root"));)
 
 - also, we can implement JS -> HTML -> JS (inside of html we can also implement another JS) => you can do simply opening {} inside of the html elements and put the expressions inside.
@@ -34,7 +34,7 @@ ES6 Template Literals; injection strings into a piece of JavaScript.
 
 */
 
-/* JSX Attributes and Styling
+/* 3) JSX Attributes and Styling
 if we will try something like; ReactDOM.render(<div><h1 class="heading">My Favourite Foods</h1>... this, 
 it'll work but still Invalid DOM property Error, so its still render down as JavaScript, so we need to use className (its coming from JS)
 
@@ -42,7 +42,8 @@ HTML Global Attributes: https://www.w3schools.com/tags/ref_standardattributes.as
 we need to use camel case inside of the code line example: <div><h1 class="heading" contentEditable>My Favourite Foods</h1>... 
 */
 
-/* Inline Styling in JSX
+/* 3a) Inline Styling in JSX
+
 {
     key:value
 }
@@ -62,5 +63,15 @@ const customStyle = {
 customStyle.color = "blue"; 
 
 ... <h1 style= {customStyle}...
+
+*/
+
+/* 4) React Components: Allow us to split up a large file or a complex web structure into smaller components. Also, reusing same functionality.
+
+<Heading /> // for convention if there is no text between the tags.(self-closing tag)
+Best practices: https://github.com/airbnb/javascript/tree/master/react
+
+index.js file will be leave at as plain JavaScript file and Heading.jsx will host all the components seperated into individual files with the jsx extension.
+
 
 */
