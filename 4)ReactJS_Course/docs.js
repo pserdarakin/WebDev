@@ -73,5 +73,39 @@ Best practices: https://github.com/airbnb/javascript/tree/master/react
 
 index.js file will be leave at as plain JavaScript file and Heading.jsx will host all the components seperated into individual files with the jsx extension.
 
+*/
+
+/* 6) React Props: Repatitive elements (card example with function), give us a chance to create custom attributes like inside of the html tags.
+function
+
+Summary; with Html attributes we have the Html tag and we have a space and we get to use these predetermined fixed name attributes such as id, placeholder or value. Those are depend on the actual element that we are using
+example; <input id="" placeholder="" value=""/> and when we use these attributes we can pass in some custom data and can be accessed via document.getElementById("email") etc.
+
+When it comes to React Props what we have is a very similar structure;
+    <Card 
+      name="Beyonce"
+      img="https://blackhistorywall.files.wordpress.com/2010/02/picture-device-independent-bitmap-119.jpg" 
+      tel="+123 456 789" 
+      mail="b@beyonce.com"
+    />
+
+But these values for each of these props then gets passed along when this Card component is created and when we output this HTML element, we can incorporate those properties into the creation of that element.
+
+    function Card(props){
+    return (
+        <div>
+        <h2>{props.name}</h2>
+        <img
+            src= {props.img}
+            alt="avatar_img"
+        />
+        <p>{props.tel}</p>
+        <p>{props.mail}</p>
+        </div>
+    );
+    }
+
+Simply that you are creating a new JavaScript Object with these key and value pairs, and then the whole object gets sent over as the props object and then you can tap into it using .name, .tel as long as they match up with the names in your component element.
+
 
 */
