@@ -131,4 +131,21 @@ Filter; Create a new array by keeping the items that return true. (conditions)
     });
 
 Reduce; Accumulate a value by doing something to each item in an array.
+
+Find; Find the first item that matches from an array.
+
+FindIndex; Find the index of the first item that matches.
+*/
+
+/* 10) Arrow Functions
+
+const newNumbers = numbers.map( function(x) {
+    return x*x;
+}) // This version will tell us there is function inside of function and that functions is a anonymous function
+
+const newNumbers = numbers.map( (x) => {
+    return x*x;
+}) // Arrow functions let us make it more simple without function name just using arrow (fat arrow)
+
+
 */

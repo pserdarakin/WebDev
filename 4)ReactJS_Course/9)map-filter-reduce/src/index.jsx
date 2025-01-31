@@ -1,4 +1,4 @@
-var numbers = [3, 56, 2, 48, 5];
+// var numbers = [3, 56, 2, 48, 5];
 
 //Map -Create a new array by doing something with each item in an array.
 
@@ -15,3 +15,15 @@ var numbers = [3, 56, 2, 48, 5];
 // to install the node modules and
 // npm run dev
 // to launch your react project in your browser
+
+import emojipedia from "./emojipedia";
+
+function emoji(emoji){
+    return emoji.meaning.substring(0, 100)
+    
+}
+
+const print = emojipedia.map(emoji);
+
+console.log(print)
+
