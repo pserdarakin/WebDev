@@ -107,5 +107,8 @@ But these values for each of these props then gets passed along when this Card c
 
 Simply that you are creating a new JavaScript Object with these key and value pairs, and then the whole object gets sent over as the props object and then you can tap into it using .name, .tel as long as they match up with the names in your component element.
 
+*/
+
+/* React Dev Tools; Custom components to seperate it out. Using for debug. (chrome and firefox only)
 
 */
