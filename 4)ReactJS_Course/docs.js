@@ -109,6 +109,26 @@ Simply that you are creating a new JavaScript Object with these key and value pa
 
 */
 
-/* React Dev Tools; Custom components to seperate it out. Using for debug. (chrome and firefox only)
+/* 7) React Dev Tools; Custom components to seperate it out. Using for debug. (chrome and firefox only)
 
+*/
+
+/* 8) Mapping Components: mapping each of the component
+
+*/
+
+/* 9) Map/Filter/Reduce Functions
+
+Map; Loop through an array and create a new array by doing something with each item in an array.
+
+    var numbers = [3, 56, 2, 48, 5];
+    numbers.map(callbackfunction) // passing function inside of a function.
+
+Filter; Create a new array by keeping the items that return true. (conditions)
+
+    numbers.filter(function(num) {
+        return num > 10
+    });
+
+Reduce; 
 */
