@@ -130,5 +130,5 @@ Filter; Create a new array by keeping the items that return true. (conditions)
         return num > 10
     });
 
-Reduce; 
+Reduce; Accumulate a value by doing something to each item in an array.
 */
