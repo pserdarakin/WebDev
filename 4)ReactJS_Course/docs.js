@@ -137,7 +137,7 @@ Find; Find the first item that matches from an array.
 FindIndex; Find the index of the first item that matches.
 */
 
-/* 10) Arrow Functions
+/* 9a) Arrow Functions
 
 const newNumbers = numbers.map( function(x) {
     return x*x;
@@ -147,5 +147,94 @@ const newNumbers = numbers.map( (x) => {
     return x*x;
 }) // Arrow functions let us make it more simple without function name just using arrow (fat arrow)
 
+*/
+
+/* 10) Conditional Rendering; Each component should be single responsibility => Single responsibility principle; 
+converting statement to expression, so that can be used inside of the jsx => 
+    Ternary Operator;
+    CONDITION ? DO IF TRUE : DO IF FALSE 
+    (condition; we define)
+    ?; After ? we say do this if true
+    Do if false if the condition is false 
+
+    example; 
+    isCloudy === true ? bringUmbrella() : bringSunscreen()
+    if its cloudy probably gonna rain, so ternary operator in your brain will say;
+    if isCloudy is true, then bringUmbrella, otherwise bringSunscreen
+
+Thats how you will end up with ... ? .... : .... 3 expression and the whole thing is become expression.
+
+    && in JS
+
+    (EXPRESSION && EXPRESSION)
+    var x=5;
+    (x > 3 && x < 7) => true && true = true
+    if x = 1 => false (1st expression) its going to be false its just checking the first one
+    so JS using this as leverage to do; 
+    CONDITION && EXPRESSION
+    TRUE && EXPRESSION => You can put your condition in first one rather than ternary operator.
+    they are not trying to check if the both side are true the purpose is to render something
 
 */
+
+/* 11) State in React 
+UI = f(State); Ice = f(-10C) && Water = f(60C)
+
+function App() {
+
+    var isDone = false; // State variable
+
+    const strikeThrough = {textDecoration: "line-through"};
+
+    return <p style={isDone ? strikeThrough : null}>Buy milk</p>;
+
+}
+
+This kind of programming is Declarative Programming, how user interace look under different conditions, depended upon state. 
+
+The other version would be Imperative Programming, when we say document.getElementById("root").stlye.textDecoration = "line-through";
+
+*/
+
+/* 12) useState Hook; functions that allow us hooking the state and read or modify it
+UI = f(State) -Hooks-> UI = f()
+*/
+
+
+// var count = 0; {/* 2) */}
+// function increase(){
+//     count ++; {/* 5) behind its increasing the number, however it is not "rendering" and we are not seeing in the UI. you can recall reactom.render again again but its not efficent. 
+//         So, for this case we can use useState hooks but  you need to implement via function*/}
+// } {/* 4) */}
+
+// ReactDom.render(
+//     <div className="container">
+//         <h1>{count}</h1>
+//         <button onClick={increase} >+</button>  {/*1) How can we get this button to triger upgrade the number*/} {/* 3) on-click action we can assign a function */}
+//     </div>,
+//     document.getElementById("root")
+// )
+
+/* const state = useState(STARTING STATE)
+
+so you can hold that value via state[0] its because its an array (const state), but its hard to follow so;
+
+Destructring; Allows us to destructure a complex structure. Complex things in JS are objects and arrays
+
+**    const rgb = [9, 132, 227] // Destructure array => const [red, green, blue] = [9, 132, 227] => Each element will be mapped with in order.
+
+So, we can change as follow to;
+    const [count] = useState(34)
+    so you can use as console.log(count)
+
+For the function part which is second part of the useState;
+    const [count, setCount] = useState(0);
+
+    function increase(){
+        setCount(count + 1)
+    }
+    
+    
+*/
+
+
