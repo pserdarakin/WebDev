@@ -237,7 +237,7 @@ For the function part which is second part of the useState;
     
 */
 
-/* Spread Operator; 
+/* 17) Spread Operator; 
 
 const citrus = ["Lime", "Lemon", "Orange"];
 const fruits = ["Apple", "Banana", "Coconut"]
@@ -276,6 +276,15 @@ you can make that code shorter to = >
 
     setContact(prevValue => ({...prevValue, [name]: value}));
 
+
+
+*/
+
+/* 18) Managing a Component Tree 
+
+seperate the components; heading area, div area with input button, li items seperate
+
+before when we take it out and use props those were stateless cause it wasnt affecting the state.
 
 
 */
