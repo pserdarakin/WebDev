@@ -237,9 +237,45 @@ For the function part which is second part of the useState;
     
 */
 
-/* 
+/* Spread Operator; 
+
+const citrus = ["Lime", "Lemon", "Orange"];
+const fruits = ["Apple", "Banana", "Coconut"]
+
+main goal is to trying to put citrus array into fruits array, Lime to Coconut etc. 
+spread operator will be used as; const fruits = ["Apple", "Banana", "Coconut", ...citrus]; or const fruits = ["Apple", ...citrus, "Banana", "Coconut"];
+basically expanded(spreaded) fruits array with citrus array 
+
+const fullName = {
+    fName: "James",
+    lName: "Bond"
+}
+
+const user = {
+    ...fullName,
+    id: 1,
+    username: "jamesbond007"
+}
+
+JS set object key by variable
+You need to make the object first, then use [] to set it. Otherwise, it will see as string rather than key variable.
+
+function handleChange(event) {
+    
+    const {name,value} = event.target;
+
+    setContact(prevValue => {
+        return {
+            ...prevValue,
+            [name] : value
+        };
+        })
+}
+
+you can make that code shorter to = > 
+
+    setContact(prevValue => ({...prevValue, [name]: value}));
+
 
 
 */
-
-
