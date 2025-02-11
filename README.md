@@ -1,7 +1,6 @@
-
 # Full-Stack JavaScript Projects Repository
 
-This repository contains various JavaScript and Node.js projects developed as part of a learning journey. The projects are categorized into **JavaScript Basics**, **Node.js Concepts**, and hands-on coding challenges. Each folder represents a topic or challenge with its own purpose.
+This repository contains various JavaScript and Node.js projects developed as part of a learning journey. The projects are categorized into **JavaScript Basics**, **Node.js Concepts**, **API Courses**, **React.js Lessons**, and hands-on coding challenges. Each folder represents a topic or challenge with its own purpose.
 
 ---
 
@@ -11,8 +10,10 @@ This repository contains various JavaScript and Node.js projects developed as pa
   - [JS_Course](#jscourse)
   - [NodeJS_Course](#nodejscourse)
   - [Projects](#projects)
+  - [API_Course](#api_course)
+  - [ReactJS_Course](#reactjs_course)
   - [htmlcheatsheet](#htmlcheatsheet)
-
+  
 ---
 
 ## Setup Instructions
@@ -70,15 +71,39 @@ This folder dives into Node.js concepts:
 ---
 
 ### **Projects**
-Real-world coding challenges and games:
-1. **Dice Challenge**:
-   - A simple two-player dice game implemented with JavaScript.
-2. **Simon Game**:
-   - A memory game based on the classic Simon electronic game.
-3. **QR Code Generator**:
-   - A Node.js project that generates QR codes for user inputs.
-4. **Secrets Access Project**:
-   - An Express.js project implementing user authentication.
+Real-world coding challenges and applications:
+1. **Dice Challenge** - A simple two-player dice game implemented with JavaScript.
+2. **Simon Game** - A memory game based on the classic Simon electronic game.
+3. **QR Code Generator** - A Node.js project that generates QR codes for user inputs.
+4. **Secrets Access Project** - An Express.js project implementing user authentication.
+5. **Band Generator Project** - A fun name generator.
+6. **API Blog Project** - A blog application using APIs.
+7. **Keeper App** - A React-based note-taking app (built in multiple stages).
+8. **My Blog - Capstone Project** - A final full-stack blog project.
+9. **Translator** - A translation web application.
+
+---
+
+### **API_Course**
+This folder focuses on API-related concepts:
+- **JSON Example**
+- **Axios for API Requests**
+- **API Authentication**
+- **REST APIs**
+- **API Build (index.js)**
+
+---
+
+### **ReactJS_Course**
+A structured learning path for React.js:
+- **JSX Basics** (Intro JSX, Babel, JSX attributes, expressions)
+- **React Components** (Functional and class components)
+- **State & Hooks** (useState, managing component state, event handling)
+- **Props & Mapping** (Passing data via props, mapping arrays)
+- **ES6 Concepts** (Destructuring, arrow functions, spread operator)
+- **React Forms & Event Handling**
+- **Conditional Rendering**
+- **React DevTools & Debugging**
 
 ---
 
@@ -89,15 +114,16 @@ Contains a basic HTML cheat sheet with examples to quickly reference essential H
 
 ## Technologies Used
 - **Frontend**:
-  - HTML, CSS, JavaScript
+  - HTML, CSS, JavaScript, React.js
 - **Backend**:
   - Node.js, Express.js
 - **Templating**:
   - EJS (Embedded JavaScript Templates)
 - **Data Handling**:
-  - JSON
+  - JSON, REST APIs
 
 ---
 
 ## License
 This project is open source and available under the [MIT License](LICENSE).
+

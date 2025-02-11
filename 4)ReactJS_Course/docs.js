@@ -215,6 +215,7 @@ UI = f(State) -Hooks-> UI = f()
 //     document.getElementById("root")
 // )
 
+
 /* const state = useState(STARTING STATE)
 
 so you can hold that value via state[0] its because its an array (const state), but its hard to follow so;
