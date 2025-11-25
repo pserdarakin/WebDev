@@ -200,10 +200,9 @@ The other version would be Imperative Programming, when we say document.getEleme
 UI = f(State) -Hooks-> UI = f()
 */
 
-
 // var count = 0; {/* 2) */}
 // function increase(){
-//     count ++; {/* 5) behind its increasing the number, however it is not "rendering" and we are not seeing in the UI. you can recall reactom.render again again but its not efficent. 
+//     count ++; {/* 5) behind its increasing the number, however it is not "rendering" and we are not seeing in the UI. you can recall reactom.render again again but its not efficent.
 //         So, for this case we can use useState hooks but  you need to implement via function*/}
 // } {/* 4) */}
 
@@ -214,7 +213,6 @@ UI = f(State) -Hooks-> UI = f()
 //     </div>,
 //     document.getElementById("root")
 // )
-
 
 /* const state = useState(STARTING STATE)
 
@@ -230,6 +228,7 @@ So, we can change as follow to;
 
 For the function part which is second part of the useState;
     const [count, setCount] = useState(0);
+    
 
     function increase(){
         setCount(count + 1)

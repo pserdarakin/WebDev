@@ -8,23 +8,23 @@ import inquirer from "inquirer";
 import qr from "qr-image";
 import fs from "fs";
 
-
 inquirer
-  .prompt([{
-    message: "Type the address that you want to convert to QR:",
-    name: "URL"
-}])
+  .prompt([
+    {
+      message: "Type the address that you want to convert to QR:",
+      name: "URL",
+    },
+  ])
   .then((answers) => {
     const url = answers.URL;
-    
+
     var qr_img = qr.image(url);
-    qr_img.pipe(fs.createWriteStream('berkant_coins.png'));
+    qr_img.pipe(fs.createWriteStream("awasoft.png"));
   })
   .catch((error) => {
     if (error.isTtyError) {
-      "Prompt couldn't be rendered in the current environment"
+      ("Prompt couldn't be rendered in the current environment");
     } else {
-      "Something else went wrong"
+      ("Something else went wrong");
     }
   });
-
