@@ -1,11 +1,9 @@
 import React from 'react';
-import Header from "./Header";
 import AddContact from "./AddContact";
 
 const App = () => {
   return (
     <div>
-      <Header />
       <AddContact />
     </div>
   )
